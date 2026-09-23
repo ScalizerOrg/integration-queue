@@ -109,7 +109,7 @@ class Base(models.AbstractModel):
             job1.delay()
 
         For more details on the graph dependencies, read the documentation of
-        :module:`~odoo.addons.integration_queue_job.delay`.
+        ``odoo.addons.integration_queue_job.delay``.
 
         :param priority: Priority of the job, 0 being the higher priority.
                          Default is 10.
@@ -127,7 +127,7 @@ class Base(models.AbstractModel):
                              and a job with the same key has not yet been run,
                              the new job will not be added. It is either a
                              string, either a function that takes the job as
-                             argument (see :py:func:`..job.identity_exact`).
+                             argument (see :func:`..job.identity_exact`).
                              the new job will not be added.
         :return: instance of a Delayable
         :rtype: :class:`odoo.addons.integration_queue_job.job.Delayable`

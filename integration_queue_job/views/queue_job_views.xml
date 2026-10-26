@@ -240,17 +240,17 @@
                 <filter
                     name="last_24_hours"
                     string="Last 24 hours"
-                    domain="[('date_created', '&gt;=', (context_today() - datetime.timedelta(days=1)).strftime('%Y-%m-%d'))]"
+                    domain="[('date_created', '&gt;=', 'today -1d')]"
                 />
                 <filter
                     name="last_7_days"
                     string="Last 7 days"
-                    domain="[('date_created', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"
+                    domain="[('date_created', '&gt;=', 'today -7d')]"
                 />
                 <filter
                     name="last_30_days"
                     string="Last 30 days"
-                    domain="[('date_created', '&gt;=', (context_today() - datetime.timedelta(days=30)).strftime('%Y-%m-%d'))]"
+                    domain="[('date_created', '&gt;=', 'today -30d')]"
                 />
                 <group>
                     <filter
